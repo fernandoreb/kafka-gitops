@@ -4,7 +4,7 @@ clusterName: kafka
 #Brokers
 brokers:
   replicas: 1
-  version: 3.5.1
+  version: 3.7.0
   volumes:
   - id: 0
     type: persistent-claim
