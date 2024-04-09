@@ -8,6 +8,7 @@ kind: KafkaTopic
 metadata:
   labels:
     strimzi.io/cluster: {{ $.Values.clusterName }}
+{{ include "argocd.defaultLabels" . | indent 4 }}      
   name: {{ $topic.name }}
   namespace: {{ $.Values.namespace }}
 spec:
