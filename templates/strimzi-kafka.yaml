@@ -1,0 +1,24 @@
+apiVersion: kafka.strimzi.io/v1beta2
+kind: Kafka
+metadata:
+  name: {{ .Values.clusterName }}
+  namespace: {{ .Values.namespace }}
+  labels:
+{{ include "argocd.defaultLabels" . | indent 4 }}  
+spec:
+  kafka:
+    version: {{ .Values.brokers.version }}
+    replicas: {{ .Values.brokers.replicas }}
+    listeners: {{toYaml .Values.brokers.listeners | nindent 4 }}    
+    config: {{toYaml .Values.brokers.config | nindent 6 }}
+    storage: {{toYaml .Values.brokers.storage | nindent 6 }}
+  zookeeper:
+    replicas: {{ .Values.zookeeper.replicas }}
+    storage:
+      type: {{ .Values.zookeeper.storageType }}
+      size: {{ .Values.zookeeper.storageSize }}
+      deleteClaim: {{ .Values.zookeeper.storageDeleteClaim }}
+      class: {{ .Values.zookeeper.storageClass }}
+  entityOperator:
+    topicOperator: {}
+    userOperator: {}
