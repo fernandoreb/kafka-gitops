@@ -47,3 +47,12 @@ zookeeper:
   storageSize: 5Gi
   storageDeleteClaim: false
   storageClass: local-storage
+
+topics:
+  - name: topic1
+    config:
+      retention.ms: '604800000'
+      segment.bytes: '1073741824'
+    partitions: 2
+    replicas: 1
+    topicName: topic1
