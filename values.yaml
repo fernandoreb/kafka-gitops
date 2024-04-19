@@ -48,6 +48,7 @@ zookeeper:
   storageDeleteClaim: false
   storageClass: local-storage
 
+#topics
 topics:
   - name: topic1
     config:
