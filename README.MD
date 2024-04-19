@@ -1,4 +1,4 @@
-# Kafka Strimzi
+# Strimzi — Kafka em kubernetes: uma abordagem gitops
 
 A descrição deste lab está no endereço: 
 
