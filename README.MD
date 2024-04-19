@@ -1,5 +1,7 @@
 # Strimzi — Kafka em kubernetes: uma abordagem gitops
 
+Aqui estão os fontes utilizados.
+
 A descrição deste lab está no endereço: 
 
 https://medium.com/@fernandoreb/strimzi-kafka-em-kubernetes-uma-abordagem-gitops-e5d90de5a407
